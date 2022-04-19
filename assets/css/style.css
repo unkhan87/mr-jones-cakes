@@ -65,14 +65,66 @@ header, a {
     color: #5AADBF;
 }
 
-#hero-image {
-    height: 900px;
+#main-image {
+    height: 600px;
     width: 100%;
-    background-image: url('../images/hero-image.jpg');
+    overflow: hidden;
+    position: relative;
+}
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background-image: url('../images/hero-image-2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
     max-height: 100%;
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* Styling h3 heading in the hero image*/
+
+.cover-text {
+    /*font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;*/
+    width: 600px;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: rgba(242, 173, 133, .2);
+    bottom: 120px;
+    left: 20px;
+    position: absolute;
+}
+
+.cover-text, h2 {
+    font-size: 40px;
+    font-weight: 10%;
+    text-transform: uppercase;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.cover-text, h3 {
+    font-size: 20px;
+    padding-top: 50px;
+    letter-spacing: 3px;
+    padding-top: 5px;
+}
+
+/* creates zoom animation for hero image */
+@keyframes hero-zoom{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
 
