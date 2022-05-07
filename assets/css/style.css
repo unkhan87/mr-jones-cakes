@@ -65,17 +65,46 @@ header, a {
     color: #5AADBF;
 }
 
-#main-image {
-    height: 600px;
+#main-image-container {
+    height: 800px;
     width: 100%;
     overflow: hidden;
-    position: relative;
+    display: flex;
 }
 
-#hero-image {
+#main-image-left {
     height: 600px;
-    width: 100%;
-    background-image: url('../images/hero-image-2.jpg');
+    width: 33%;
+    background-image: url(../images/main-image-left.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    margin-left: 10px;
+}
+
+#main-image-mid {
+    height: 600px;
+    width: 33%;
+    background-image: url(../images/main-image-mid.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    animation-name: main-zoom-out;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+#main-image-right {
+    height: 600px;
+    width: 33%;
+    background-image: url(../images/main-image-right.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,6 +154,15 @@ header, a {
     }
     to{
         transform: scale(1.1);
+    }
+}
+
+@keyframes main-zoom-out{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.85);
     }
 }
 
