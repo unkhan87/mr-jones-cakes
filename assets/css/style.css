@@ -188,6 +188,29 @@ header, a {
     line-height: 30px;
 }
 
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #333740;
+    background: transparent;
+    color: whitesmoke;
+    box-shadow: inset 0 0 0 0 #333740;
+    overflow: hidden;
+    outline: none;
+    transition: ease-out 0.5s;
+}
+
+
+button:hover {
+    box-shadow: inset 200px 0 0 0 #333740;
+    cursor: pointer;
+}
+
+
 /* creates zoom animation for hero image */
 @keyframes hero-zoom{
     from{
